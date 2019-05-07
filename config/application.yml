@@ -1,0 +1,15 @@
+spring:
+  profiles: DEV
+server:
+  port: 8761
+eureka:
+  environment: ${spring.profiles}
+  client:
+    fetchRegistry: false
+    registerWithEureka: false
+  server:
+    eviction-interval-timer-in-ms: 1000
+    enableSelfPreservation: false
+management:
+  security:
+    enabled: false
